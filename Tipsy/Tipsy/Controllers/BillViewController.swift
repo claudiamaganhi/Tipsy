@@ -27,6 +27,11 @@ class BillViewController: UIViewController {
         applyStyle()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        billValueTextField.becomeFirstResponder()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          billValueTextField.endEditing(true)
     }
@@ -74,7 +79,6 @@ class BillViewController: UIViewController {
         resultViewController.perPerson = billCalculator.calculatePerPersonValue()
         present(resultViewController, animated: true, completion: nil)
     }
- 
     
 }
 
