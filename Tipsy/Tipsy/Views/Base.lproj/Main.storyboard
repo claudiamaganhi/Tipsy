@@ -50,9 +50,9 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E.g: 123.45" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bO5-Tj-Iwn">
                                                 <rect key="frame" x="0.0" y="143" width="414" height="37.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="textColor" red="0.0" green="0.56470588235294117" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.1529411765" green="0.28627450980000002" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rck-Mf-aYf">
                                                 <rect key="frame" x="0.0" y="200.5" width="414" height="10"/>
@@ -186,11 +186,14 @@
                         <outlet property="splitLabel" destination="Dpj-pE-8Q4" id="h8m-eH-IfK"/>
                         <outlet property="tenPerCentButton" destination="PvI-2R-F8k" id="nhN-JU-2OV"/>
                         <outlet property="zeroPerCentButton" destination="qdu-7e-0KS" id="lW2-79-VXg"/>
+                        <outletCollection property="percentageButtonCollection" destination="qdu-7e-0KS" collectionClass="NSMutableArray" id="Jd6-ug-2NP"/>
+                        <outletCollection property="percentageButtonCollection" destination="PvI-2R-F8k" collectionClass="NSMutableArray" id="8cN-jT-ljA"/>
+                        <outletCollection property="percentageButtonCollection" destination="wkY-5t-A1v" collectionClass="NSMutableArray" id="BeB-Go-WWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="114"/>
+            <point key="canvasLocation" x="104" y="114"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="mfV-yw-1HM">
@@ -250,7 +253,7 @@
                                     <constraint firstAttribute="trailing" secondItem="qy4-Zi-BYe" secondAttribute="trailing" id="jRY-e8-yjr"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 0 people, 10% tip." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AO-wK-uXn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 0 people, 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AO-wK-uXn">
                                 <rect key="frame" x="20" y="267" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
